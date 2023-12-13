@@ -1,4 +1,4 @@
-import { render } from '@testing-library/react';
+import { render, screen } from '@testing-library/react';
 import W12MForm from './W12MForm';
 
 test('renders form element', () => {
