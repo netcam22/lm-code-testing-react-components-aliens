@@ -1,5 +1,5 @@
 
-type FormValuesProps = {
+export type FormValuesProps = {
     title: string;
     value: string;
     role: string;

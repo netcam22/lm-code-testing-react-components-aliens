@@ -10,7 +10,7 @@ test('renders form label for maths question', () => {
 		value: "4",
 		onChange: () => {},
 		regex: /^4{1}$/,
-		message: "",
+		message: '"4" must be selected',
 		submitted: false,
 		validate: () =>  "",
 		options: ["Not 4", "0", "4", "99", "4 million"]
@@ -23,7 +23,7 @@ test('renders form label for maths question', () => {
 	expect(labelText).toBeInTheDocument();
 });
 
-test('Maths question Input field exists', async () => {
+test('Maths question Input field exists', () => {
     //Arrange
 	const requiredProps: SelectInputProps = {
 		title: "What is 2 + 2?",
@@ -31,7 +31,7 @@ test('Maths question Input field exists', async () => {
 		value: "4",
 		onChange: () => {},
 		regex: /^4{1}$/,
-		message: "",
+		message: '"4" must be selected',
 		submitted: false,
 		validate: () =>  "",
 		options: ["Not 4", "0", "4", "99", "4 million"]
@@ -43,7 +43,7 @@ test('Maths question Input field exists', async () => {
     expect(selectInput).toBeInTheDocument();
 });
 
-test('Maths question input field displays value passed in through props', async () => {
+test('Maths question input field displays value passed in through props', () => {
     //Arrange
 	const requiredProps : SelectInputProps = {
 		title: "What is 2 + 2?",
@@ -51,7 +51,7 @@ test('Maths question input field displays value passed in through props', async 
 		value: "99",
 		onChange: () => {},
 		regex: /^4{1}$/,
-		message: "",
+		message: '"4" must be selected',
 		submitted: false,
 		validate: () =>  "",
 		options: ["Not 4", "0", "4", "99", "4 million"]
@@ -63,7 +63,7 @@ test('Maths question input field displays value passed in through props', async 
 	expect(selectInput.value).toBe("99");
 });
 
-test('Maths question input field call its onChange function', async () => {
+test('Maths question input field call its onChange function', () => {
     //Arrange
 	const mockChange = jest.fn();
 	
@@ -73,7 +73,7 @@ test('Maths question input field call its onChange function', async () => {
 		value: "",
 		onChange: mockChange,
 		regex: /^4{1}$/,
-		message: "",
+		message: '"4" must be selected',
 		submitted: false,
 		validate: () =>  "",
 		options: ["Not 4", "0", "4", "99", "4 million"]

@@ -1,5 +1,5 @@
 	
-export const validateTextInput = 
+export const validateInput = 
 (title: string, regex: RegExp, value: string, message: string): Array<string> => {
 
 	// needs to return an array of error messages

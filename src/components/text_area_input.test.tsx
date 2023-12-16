@@ -24,7 +24,7 @@ test('renders form label for reasons for sparing', () => {
 });
 
 
-test('Species name Input field exists', async () => {
+test('Species name Input field exists', () => {
     //Arrange
 	const requiredProps = {
 		title: "Reasons For Sparing",
@@ -39,12 +39,12 @@ test('Species name Input field exists', async () => {
 	};
 	//Act
 	render(<TextAreaInput {...requiredProps}/>);
-	const inputField = screen.getByLabelText("Reasons For Sparing");
+	const inputField: HTMLInputElement = screen.getByLabelText("Reasons For Sparing");
 	//Assert
     expect(inputField).toBeInTheDocument();
 });
 
-test('Reasons For Sparing input field displays value passed in through props', async () => {
+test('Reasons For Sparing input field displays value passed in through props', () => {
     //Arrange
 	const requiredProps = {
 		title: "Reasons For Sparing",
@@ -64,7 +64,7 @@ test('Reasons For Sparing input field displays value passed in through props', a
 	expect(inputField.value).toBe("Because we are a special species");
 });
 
-test('Reasons For Sparing input field call its onChange function', async () => {
+test('Reasons For Sparing input field call its onChange function', () => {
     //Arrange
 	const mockChange = jest.fn();
 	const requiredProps = {

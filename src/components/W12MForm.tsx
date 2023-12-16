@@ -7,7 +7,7 @@ import { Output } from './output';
 import { SubmitButton } from './submit_button';
 import { formTextInput, formSelectInput, formTextAreaInput, formDataArray, initialValues}
 from '../data/alien_form_data';
-import { validateTextInput } from "../validate/validate_text_input";
+import { validateInput } from "../validate/validate_input";
 export interface InputProps {
 	title: string;
 	role: string;
@@ -56,7 +56,7 @@ const W12MForm = () => {
 
 	function validateTextField(title:string, regex: RegExp, value: string, message: string) {
 		if (submitted) {
-		const errorMessage  = validateTextInput(title, regex, value, message)
+		const errorMessage  = validateInput(title, regex, value, message)
 				.reduce((acc: string, message: string) => acc+" and "+message, "")
 				.replace(" and ", "");
 		return errorMessage;

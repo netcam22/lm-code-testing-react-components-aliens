@@ -27,7 +27,7 @@ export const formSelectInput: Array<FormSelectInputObject> = [
     title: "What is 2 + 2?",
     role: "mathsAnswer",
     regex: /^4{1}$/,
-    errorMessage: `Error: "4" must be selected`,
+    errorMessage: `"4" must be selected`,
     options: ["Not 4", "0", "4", "99", "4 million"]
     }
 ];

@@ -20,7 +20,7 @@ return (
 					value = {props.value}
 					onChange = {props.onChange} 
 		/>
-		{errorMessage !== "" &&
+		{props.submitted && errorMessage !== "" &&
 		<span className = "error" >Error: {errorMessage}</span>
 		}
     </> 
