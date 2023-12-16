@@ -6,7 +6,6 @@ body {
 	background-color: var(--light);
 	font-family: Arial, Helvetica, sans-serif;
 	line-height: 1.5;
-	display: flex;
 	justify-content: center;
 	margin: 0;
 }
@@ -23,15 +22,15 @@ body {
   .col-50-left {
 	float: left;
 	width: 50%;
-	margin-top: 1%;
+	margin: 0;
   }
   
   .col-50-right {
 	float: right;
 	width: 48%;
-	margin-top: 1%;
-	margin-left: 2%;
-	padding: 2%;
+	margin-top: 0;
+	margin-left: 0;
+	padding: 0 2%;
   }
 
   .pending {
@@ -55,6 +54,7 @@ body {
   label {
 	padding: 1% 1% 1% 0;
 	display: inline-block;
+	width: 100%;
   }
   
   input[type=submit], button {
@@ -76,5 +76,13 @@ body {
 	content: "";
 	display: table;
 	clear: both;
+  }
+
+  .error {
+	color: #ff0000
+  }
+
+  .valid {
+	color:  #2b1a1a;
   }
 
