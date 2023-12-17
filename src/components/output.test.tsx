@@ -8,8 +8,8 @@ test('renders title for species name in output following form submission', () =>
 		title: "Species Name",
 		value: "Woman",
 		role: "speciesName",
-		regex: /^[a-z]{3,23}$/gi,
-		message: "Must be between 3 and 23 characters. No numbers or special characters allowed!",
+		regex: [/^[a-z]{3,23}$/gi],
+		message: ["Must be between 3 and 23 characters. No numbers or special characters allowed!"],
 		validate: () =>  "",
 		submitted: true,
 	};
@@ -28,8 +28,8 @@ test('Reasons For Sparing output does not display if there has been no submissio
 		title: "Reasons For Sparing",
 		role: "reasonsForSparing",
 		value: "",
-		regex: /^.{17,153}$/gi,
-		message: "Must be between 17 and 153 characters",
+		regex: [/^.{17,153}$/gi],
+		message: ["Must be between 17 and 153 characters"],
 		validate: () =>  "",
 		submitted: false,
 		size: {rows: 5, cols: 20}
@@ -46,8 +46,8 @@ test('Reasons For Sparing output displays if there has been submission', () => {
 		title: "Reasons For Sparing",
 		role: "reasonsForSparing",
 		value: "Because we are a special species",
-		regex: /^.{17,153}$/gi,
-		message: "Must be between 17 and 153 characters",
+		regex: [/^.{17,153}$/gi],
+		message: ["Must be between 17 and 153 characters"],
 		submitted: true,
 		validate: () =>  "",
 		size: {rows: 5, cols: 20}
@@ -68,8 +68,8 @@ test('Reasons For Sparing output displays error message if submitted value is in
 		title: "Reasons For Sparing",
 		role: "reasonsForSparing",
 		value: "B",
-		regex: /^.{17,153}$/gi,
-		message: "Must be between 17 and 153 characters",
+		regex: [/^.{17,153}$/gi],
+		message: ["Must be between 17 and 153 characters"],
 		submitted: true,
 		validate: mockValidate,
 		size: {rows: 5, cols: 20}
@@ -91,8 +91,8 @@ test('Number of Beings output displays error message if submitted value is inval
 		title: "Number of Beings",
 		role: "numberOfBeings",
 		value: "5",
-		regex: /^[0-9]{10,}$/g,
-		message: "Numbers ONLY. Must be at least 1,000,000,000",
+		regex: [/^[0-9]{10,}$/g],
+		message: ["Numbers ONLY. Must be at least 1,000,000,000"],
 		submitted: true,
 		validate: mockValidate
 	};
@@ -111,8 +111,8 @@ test('Maths answer validation returns error message if answer is incorrect', () 
 		title: "What is 2 + 2?",
 		role: "mathsAnswer",
 		value: "99",
-		regex: /^4{1}$/,
-		message: '"4" must be selected',
+		regex: [/^4{1}$/],
+		message: ['"4" must be selected'],
 		submitted: true,
 		validate: mockValidate,
 		options: ["Not 4", "0", "4", "99", "4 million"]
@@ -132,8 +132,8 @@ test('Maths answer validation returns no error message if answer is correct', ()
 		title: "What is 2 + 2?",
 		role: "mathsAnswer",
 		value: "4",
-		regex: /^4{1}$/,
-		message: '"4" must be selected',
+		regex: [/^4{1}$/],
+		message: ['"4" must be selected'],
 		submitted: true,
 		validate: mockValidate,
 		options: ["Not 4", "0", "4", "99", "4 million"]

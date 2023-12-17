@@ -9,8 +9,8 @@ test('renders form label for species name', () => {
 		role: "speciesName",
 		value: "Woman",
 		onChange: () => {},
-		regex: /^[a-z]{3,23}$/gi,
-		message: "Must be between 3 and 23 characters. No numbers or special characters allowed!",
+		regex: [/^[a-z]{3,23}$/gi],
+		message: ["Must be between 3 and 23 characters. No numbers or special characters allowed!"],
 		submitted: false,
 		validate: () =>  ""
 	};
@@ -30,8 +30,8 @@ test('Species name Input field exists', () => {
 		role: "speciesName",
 		value: "",
 		onChange: () => {},
-		regex: /^[a-z]{3,23}$/gi,
-		message: "Must be between 3 and 23 characters. No numbers or special characters allowed!",
+		regex: [/^[a-z]{3,23}$/gi],
+		message: ["Must be between 3 and 23 characters. No numbers or special characters allowed!"],
 		submitted: false,
 		validate: () => ""
 	};
@@ -49,8 +49,8 @@ test('Species name input field displays value passed in through props', () => {
 		role: "speciesName",
 		value: "Woman",
 		onChange: () => {},
-		regex: /^[a-z]{3,23}$/gi,
-		message: "Must be between 3 and 23 characters. No numbers or special characters allowed!",
+		regex: [/^[a-z]{3,23}$/gi],
+		message: ["Must be between 3 and 23 characters. No numbers or special characters allowed!"],
 		submitted: false,
 		validate: () => ""
 	};
@@ -69,8 +69,8 @@ test('Species name input field call its onChange function', () => {
 		role: "speciesName",
 		value: "",
 		onChange: mockChange,
-		regex: /^[a-z]{3,23}$/gi,
-		message: "Must be between 3 and 23 characters. No numbers or special characters allowed!",
+		regex: [/^[a-z]{3,23}$/gi],
+		message: ["Must be between 3 and 23 characters. No numbers or special characters allowed!"],
 		submitted: false,
 		validate: () => ""
 	};
@@ -92,8 +92,8 @@ test('renders form label for planet name', () => {
 		role: "planetName",
 		value: "Mars",
 		onChange: () => {},
-		regex: /^[a-z0-9]{2,49}$/gi,
-		message: "Must be between 2 and 49 characters. Numbers are allowed, but no special characters.",
+		regex: [/^[a-z0-9]{2,49}$/gi],
+		message: ["Must be between 2 and 49 characters. Numbers are allowed, but no special characters."],
 		submitted: false,
 		validate: () =>  ""
 	};
@@ -113,8 +113,8 @@ test('Planet name Input field exists', () => {
 		role: "planetName",
 		value: "",
 		onChange: () => {},
-		regex: /^[a-z0-9]{2,49}$/gi,
-		message: "Must be between 2 and 49 characters. Numbers are allowed, but no special characters.",
+		regex: [/^[a-z0-9]{2,49}$/gi],
+		message: ["Must be between 2 and 49 characters. Numbers are allowed, but no special characters."],
 		submitted: false,
 		validate: () =>  ""
 	};
@@ -132,8 +132,8 @@ test('Planet name input field displays value passed in through props', () => {
 		role: "planetName",
 		value: "Mars",
 		onChange: () => {},
-		regex: /^[a-z0-9]{2,49}$/gi,
-		message: "Must be between 2 and 49 characters. Numbers are allowed, but no special characters.",
+		regex: [/^[a-z0-9]{2,49}$/gi],
+		message: ["Must be between 2 and 49 characters. Numbers are allowed, but no special characters."],
 		submitted: false,
 		validate: () =>  ""
 	};
@@ -152,8 +152,8 @@ test('Planet name input field calls its onChange function', () => {
 		role: "planetName",
 		value: "",
 		onChange: mockChange,
-		regex: /^[a-z0-9]{2,49}$/gi,
-		message: "Must be between 2 and 49 characters. Numbers are allowed, but no special characters.",
+		regex: [/^[a-z0-9]{2,49}$/gi],
+		message: ["Must be between 2 and 49 characters. Numbers are allowed, but no special characters."],
 		submitted: false,
 		validate: () =>  ""
 	};
@@ -174,8 +174,8 @@ test('renders form label for number of beings', () => {
 		role: "numberOfBeings",
 		value: "999",
 		onChange: () => {},
-		regex: /^[0-9]{10,}$/g,
-		message: "Numbers ONLY. Must be at least 1,000,000,000",
+		regex: [/^[0-9]{10,}$/g],
+		message: ["Numbers ONLY. Must be at least 1,000,000,000"],
 		submitted: false,
 		validate: () =>  ""
 	};
@@ -195,8 +195,8 @@ test('Number of Beings Input field exists', () => {
 		role: "numberOfBeings",
 		value: "",
 		onChange: () => {},
-		regex: /^[0-9]{10,}$/g,
-		message: "Numbers ONLY. Must be at least 1,000,000,000",
+		regex: [/^[0-9]{10,}$/g],
+		message: ["Numbers ONLY. Must be at least 1,000,000,000"],
 		submitted: false,
 		validate: () =>  ""
 	};
@@ -214,8 +214,8 @@ test('Number of Beings input field displays value passed in through props', () =
 		role: "numberOfBeings",
 		value: "100000000000",
 		onChange: () => {},
-		regex: /^[0-9]{10,}$/g,
-		message: "Numbers ONLY. Must be at least 1,000,000,000",
+		regex: [/^[0-9]{10,}$/g],
+		message: ["Numbers ONLY. Must be at least 1,000,000,000"],
 		submitted: false,
 		validate: () =>  ""
 	};
@@ -234,8 +234,8 @@ test('Number of Beings input field calls its onChange function', () => {
 		role: "numberOfBeings",
 		value: "",
 		onChange: mockChange,
-		regex: /^[0-9]{10,}$/g,
-		message: "Numbers ONLY. Must be at least 1,000,000,000",
+		regex: [/^[0-9]{10,}$/g],
+		message: ["Numbers ONLY. Must be at least 1,000,000,000"],
 		submitted: false,
 		validate: () =>  ""
 	};
@@ -257,8 +257,8 @@ test('Number of Beings displays error message under input field if submitted val
 		role: "numberOfBeings",
 		value: "5",
 		onChange: () => {},
-		regex: /^[0-9]{10,}$/g,
-		message: "Numbers ONLY. Must be at least 1,000,000,000",
+		regex: [/^[0-9]{10,}$/g],
+		message: ["Numbers ONLY. Must be at least 1,000,000,000"],
 		submitted: true,
 		validate: mockValidate
 	};

@@ -3,9 +3,9 @@ export type FormValuesProps = {
     title: string;
     value: string;
     role: string;
-    regex: RegExp;
-    message: string;
-    validate: (title:string, regex: RegExp, value: string, message: string) => string;
+    regex: Array<RegExp>;
+    message: Array<string>;
+    validate: (title:string, regex: Array<RegExp>, value: string, message: Array<string>) => string;
     submitted: boolean;
   }
 

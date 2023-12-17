@@ -1,6 +1,6 @@
 import { ChangeEventHandler } from "react";
 import { InputProps } from "./W12MForm";
-
+import { ErrorMessage } from './error_message';
 export interface TextAreaInputProps extends InputProps {
 	onChange: ChangeEventHandler<HTMLTextAreaElement>;
 	size: {
@@ -24,7 +24,7 @@ export const TextAreaInput : React.FC<TextAreaInputProps> = (props) => {
 					value={props.value}
 					onChange= {props.onChange}  />
     {errorMessage !== "" &&
-		<span className = "error" >Error: {errorMessage}</span>
+		<ErrorMessage message = {errorMessage}/>
 		}
 	</>
 	 )

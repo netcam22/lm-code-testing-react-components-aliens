@@ -9,8 +9,8 @@ test('renders form label for maths question', () => {
 		role: "mathsAnswer",
 		value: "4",
 		onChange: () => {},
-		regex: /^4{1}$/,
-		message: '"4" must be selected',
+		regex: [/^4{1}$/],
+		message: ['"4" must be selected'],
 		submitted: false,
 		validate: () =>  "",
 		options: ["Not 4", "0", "4", "99", "4 million"]
@@ -30,8 +30,8 @@ test('Maths question Input field exists', () => {
 		role: "mathsAnswer",
 		value: "4",
 		onChange: () => {},
-		regex: /^4{1}$/,
-		message: '"4" must be selected',
+		regex: [/^4{1}$/],
+		message: ['"4" must be selected'],
 		submitted: false,
 		validate: () =>  "",
 		options: ["Not 4", "0", "4", "99", "4 million"]
@@ -50,8 +50,8 @@ test('Maths question input field displays value passed in through props', () => 
 		role: "mathsAnswer",
 		value: "99",
 		onChange: () => {},
-		regex: /^4{1}$/,
-		message: '"4" must be selected',
+		regex: [/^4{1}$/],
+		message: ['"4" must be selected'],
 		submitted: false,
 		validate: () =>  "",
 		options: ["Not 4", "0", "4", "99", "4 million"]
@@ -72,8 +72,8 @@ test('Maths question input field call its onChange function', () => {
 		role: "mathsAnswer",
 		value: "",
 		onChange: mockChange,
-		regex: /^4{1}$/,
-		message: '"4" must be selected',
+		regex: [/^4{1}$/],
+		message: ['"4" must be selected'],
 		submitted: false,
 		validate: () =>  "",
 		options: ["Not 4", "0", "4", "99", "4 million"]

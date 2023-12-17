@@ -1,5 +1,6 @@
 import { ChangeEventHandler} from 'react';
 import { InputProps } from "./W12MForm";
+import { ErrorMessage } from './error_message';
 
 export interface TextInputProps extends InputProps {
 	onChange: ChangeEventHandler<HTMLInputElement>;
@@ -21,7 +22,7 @@ return (
 					onChange = {props.onChange} 
 		/>
 		{props.submitted && errorMessage !== "" &&
-		<span className = "error" >Error: {errorMessage}</span>
+		<ErrorMessage message = {errorMessage}/>
 		}
     </> 
 	);
